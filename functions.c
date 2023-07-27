@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "printf_functions.h"
 
 /**
@@ -100,7 +99,4 @@ int _print_int(va_list a)
 	count = digit_MAX - i;
 	write(1, &intStr[i], count);
 	return (count);
-
-
-
 }
