@@ -24,4 +24,4 @@ int _print_mod(va_list a);
 int _print_string(va_list a);
 int _print_int(va_list a);
 
-#endif 
+#endif

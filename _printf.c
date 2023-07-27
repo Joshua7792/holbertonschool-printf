@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 {
 	va_list a;
 	int count = 0, i = 0, j = 0;
-
 	_printf_functions types[] = {
 		{"c", _print_char},
 		{"s", _print_string},
@@ -22,15 +21,14 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	
 	if (format == NULL)
-		return(-1);
+		return (-1);
 	va_start(a, format);
-	while(format[i])
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			while(format[++i] == ' ')
+			while (format[++i] == ' ')
 				;
 			for (j = 0; j < 6; j++)
 			{
@@ -50,6 +48,6 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(a);
-	return(count);
+	return (count);
 }
 
