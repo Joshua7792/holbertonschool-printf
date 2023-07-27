@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...);
 {
-	struct _printf_function _printf_functions[] = {
+	_printf_functions types[] = {
 		{'c', _print_char},
 		{'s', _print_string},
 		{'i', _print_int},
@@ -17,3 +17,25 @@ int _printf(const char *format, ...);
 		{NULL, NULL}
 	};
 };
+
+int i = 0;
+int x = 0;
+
+va_start(va_list, args);
+	while (format != NULL && format[i])
+	{
+		x = 0;
+
+		while (x < 5)
+		{
+			if (format[i] == *types[x].convertion_specifier)
+			{
+				types[x].function(va_list, args);
+			}
+			x++;
+		}
+		i++;
+	}
+	va_end(args);
+	printf("\n");
+}
