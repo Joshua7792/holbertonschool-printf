@@ -11,20 +11,18 @@
 int _printf(const char *format, ...)
 {
 	va_list a;
-	int count = 0, i = 0, j = 0;
-	_printf_functions types[] = {
-		{"c", _print_char},
+	int count = 0, j, i;
+	_printf_functions types[] = {{"c", _print_char},
 		{"s", _print_string},
 		{"i", _print_int},
 		{"d", _print_int},
 		{"%", _print_mod},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 
 	if (format == NULL)
 		return (-1);
 	va_start(a, format);
-	while (format[i])
+	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -43,11 +41,8 @@ int _printf(const char *format, ...)
 		{
 			write(1, &format[i], 1);
 			count += 1;
-
 		}
-		i++;
 	}
 	va_end(a);
 	return (count);
 }
-
