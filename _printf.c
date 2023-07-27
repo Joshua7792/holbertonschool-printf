@@ -1,4 +1,4 @@
-#include "printf_functions.h"
+#include "main.h"
 
 /**
  * _printf - takes a string and args of each '%'
