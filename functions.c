@@ -1,4 +1,4 @@
-#include "printf_functions.h"
+#include "main.h"
 
 /**
  * _print_char - prints character from the corresponding
