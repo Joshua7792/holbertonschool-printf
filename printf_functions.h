@@ -12,7 +12,7 @@
  */
 typedef struct _printf_function
 {
-	char convertion_specifier;
+	char *convertion_specifier;
 	int (*function)(va_list);
 } _printf_functions;
 
