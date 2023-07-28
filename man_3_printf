@@ -33,6 +33,9 @@ RETURN VALUE
        The  _printf  function  returns the number of characters printed on suc-
        cess. On failure, it returns -1.
 
+COMPILATION
+       $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+
 SEE ALSO
        printf(3), fprintf(3)
 
