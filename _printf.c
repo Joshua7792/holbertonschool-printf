@@ -20,33 +20,33 @@ int _printf(const char *format, ...)
 		{NULL, NULL}};
 
 	if (format == NULL)
-        return (-1);
+		return (-1);
 
-    va_start(a, format);
-    for (i = 0; format[i]; i++)
-    {
-        if (format[i] == '%')
-        {
-            i++; /* Move to the next character after '%' */
-            while (format[i] == ' ')
-                i++; /* Skip any spaces after '%' */
+	va_start(a, format);
+	for (i = 0; format[i]; i++)
+	{
+		if (format[i] == '%')
+		{
+			i++; /* Move to the next character after '%' */
+			while (format[i] == ' ')
+				i++; /* Skip any spaces after '%' */
 
-            /* Find the appropriate conversion specifier in the types array */
-            for (j = 0; types[j].convertion_specifier != NULL; j++)
-            {
-                if (format[i] == *types[j].convertion_specifier)
-                {
-                    count += types[j].function(a);
-                    break;
-                }
-            }
-        }
-        else
-        {
-            write(1, &format[i], 1);
-            count++;
-        }
-    }
-    va_end(a);
-    return (count);
+			/* Find the appropriate conversion specifier in the types array */
+			for (j = 0; types[j].convertion_specifier != NULL; j++)
+			{
+				if (format[i] == *types[j].convertion_specifier)
+				{
+					count += types[j].function(a);
+					break;
+				}
+			}
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			count++;
+		}
+	}
+	va_end(a);
+	return (count);
 }
