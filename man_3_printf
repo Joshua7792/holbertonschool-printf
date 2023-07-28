@@ -1,0 +1,41 @@
+MAN(3)                       Library Functions Manual                       MAN(3)
+
+NAME
+       _printf - custom printf function
+
+SYNOPSIS
+       #include <main.h>
+
+       int _printf(const char *format, ...);
+
+DESCRIPTION
+       The  _printf  function is a custom implementation of the standard printf
+       function in C. It takes a format string and a variable number of  argu-
+       ments and prints the formatted output to the standard output (stdout).
+
+       The format string can contain ordinary characters as well as format spe-
+       cifiers that begin with the '%' character, followed by a conversion spe-
+       cifier character.
+
+       The supported conversion specifiers are:
+
+       %c     Print a single character.
+
+       %s     Print a null-terminated string.
+
+       %i     Print a signed integer.
+
+       %d     Print a signed integer (same as %i).
+
+       %%     Print a single '%' character.
+
+RETURN VALUE
+       The  _printf  function  returns the number of characters printed on suc-
+       cess. On failure, it returns -1.
+
+SEE ALSO
+       printf(3), fprintf(3)
+
+AUTHOR
+Joshua Santiago 
+                                 July 2023                               MAN(3)
