@@ -29,7 +29,7 @@ int _print_char(va_list a)
 int _print_mod(va_list a)
 {
 	/* Ignore the arguments list */
-	(void) a;
+	(void)a;
 
 	/* Write the modulus character to stdout */
 	write(1, "%", 1);
