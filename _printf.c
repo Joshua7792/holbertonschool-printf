@@ -21,18 +21,14 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(a, format);
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
-			i++; /* Move to the next character after '%' */
-			while (format[i] == ' ')
-				i++; /* Skip any spaces after '%' */
-
-			/* Find the appropriate conversion specifier in the types array */
-			for (j = 0; types[j].convertion_specifier != NULL; j++)
+			while (format[++i] == ' ')
+				;
+			for (j = 0; j < 6; j++)
 			{
 				if (format[i] == *types[j].convertion_specifier)
 				{
@@ -44,7 +40,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			write(1, &format[i], 1);
-			count++;
+			count += 1;
 		}
 	}
 	va_end(a);
