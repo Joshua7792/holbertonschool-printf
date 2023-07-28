@@ -49,7 +49,7 @@ for (i = 0; format[i]; i++)
 
       /* Check if the current character matches the conversion specifier of
          the current function in the array. */
-      if (format[i] == types[j].convertion_specifier)
+      if (format[i] == *types[j].convertion_specifier)
       {
 
         /* Call the function to print the argument. */
