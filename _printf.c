@@ -28,13 +28,18 @@ int _printf(const char *format, ...)
 		{
 			while (format[++i] == ' ')
 				;
-			for (j = 0; j < 6; j++)
+			for (j = 0; types[j].convertion_specifier != NULL ; j++)
 			{
 				if (format[i] == *types[j].convertion_specifier)
 				{
 					count += types[j].function(a);
 					break;
 				}
+			}
+			if (types[j].convertion_specifier == NULL)
+			{
+				write(1, &format[i], 1);
+				count += 1;
 			}
 		}
 		else
