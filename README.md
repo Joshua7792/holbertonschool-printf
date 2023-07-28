@@ -1,13 +1,13 @@
 ![_printf banner](https://media.giphy.com/media/oVvhEYvWDvE1G/giphy.gif)
 
 ## Table of Content
-:computer::flash: _printf.c: This is the main code, of our custom function, it's a replica of the printf function.
+_printf.c: This is the main code, of our custom function, it's a replica of the printf function.
 
-:computer: function_declaration.c: Contains all the functions that are call in our _printf.c file.
+function.c: Contains all the functions that are call in our _printf.c file.
 
-:computer: main.h: It's the header file, contains the prototype to our functions.
+main.h: It's the header file, contains the prototype to our functions.
 
-:computer: man_3_printf: This file contains the man page for the function _printf.
+man_3_printf: This file contains the man page for the function _printf.
 
 ## Description
 
@@ -48,10 +48,7 @@ The challenges we faced are the following:
 * The creation of the function to print intergers.
 * Trying to create a function with the little information that was given to us. 
 
-Solving these challenges helped us to develop critical thinking and emphasize collaboration.
-
-## Reference
-This function work similar to ![printf(3)](https://man7.org/linux/man-pages/man3/printf.3.html). 
+Solving these challenges helped us to develop critical thinking and emphasize collaboration
 
 ## Developer
 ### Joshua Santiago
