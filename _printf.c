@@ -42,7 +42,7 @@ for (i = 0; format[i]; i++)
       ;
 
     /* Iterate through the _printf_functions array and check if the current
-       character is a valid conversion specifier. If it is, then call the
+      character is a valid conversion specifier. If it is, then call the
        corresponding function to print the argument. */
     for (j = 0; types[j].convertion_specifier != NULL; j++)
     {
